@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      {{ letter.name }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-border>
+
+    <ion-list-header class="header">
+      Cliente
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon name='contact' item-left></ion-icon>
+      Nome
+      <ion-note item-right>
+        {{ letter.client }}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="inputsHeader">
+
+    <ion-list-header class="header">
+      Carta de Faturamento
+    </ion-list-header>
+
+    <ion-item class="inputsCarta">
+      <ion-toggle checked="{{ letter.issued }}" disabled></ion-toggle>
+      <ion-label strong enabled>
+        Emitida
+      </ion-label>
+      <ion-icon name='done-all' item-left></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='flag' item-left></ion-icon>
+      Status
+      <ion-note item-right>
+        {{ letter.status }}
+      </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='card' item-left></ion-icon>
+      Valor
+      <ion-note item-right>
+        R${{ letter.value }},00
+      </ion-note>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list class="inputsHeader">
+
+    <ion-list-header class="header">
+      Departamento
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon name='briefcase' item-left></ion-icon>
+      Nome
+      <ion-note item-right>
+        {{ letter.division }}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

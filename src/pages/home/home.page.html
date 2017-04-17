@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-title>Home</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-img width="160" height="31" class="topMiddle" src="http://fc-billing-homolog.azurewebsites.net/Content/images/billing-logo.png"></ion-img>
+    
+    <ion-list class="listAlignment">
+        <button ion-item *ngFor="let div of divisions" (click)="itemTapped($event, div)">
+            {{ div.name }}
+        </button>
+
+    </ion-list>
+
+    
+</ion-content>

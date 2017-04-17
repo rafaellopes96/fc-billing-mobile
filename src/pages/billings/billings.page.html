@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>
+            {{ div.name }}
+        </ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="goToFiltersPage()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-img width="160" height="31" class="topMiddle" src="http://fc-billing-homolog.azurewebsites.net/Content/images/billing-logo.png"></ion-img>
+
+
+    <ion-searchbar (ionInput)="getLetters($event)" class="searchBar"></ion-searchbar>
+
+    <ion-card color="dark">
+            <ion-card-header class="cardsHeader">
+                <ion-icon name="list-box" item-right></ion-icon>
+                Cartas
+                    
+            </ion-card-header>
+
+            </ion-card>
+
+            <ion-item>
+                Total
+                <ion-icon name='calculator' class="calculatorIcon" item-left></ion-icon>
+                    
+                <ion-note item-right>
+                    R${{ valueReturn }},00
+                </ion-note>
+            </ion-item>
+                <ion-card *ngFor="let letter of letters" (click)="letterTapped($event, letter)">
+                    
+                    <ion-card-header>
+                        <ion-icon name="contact"></ion-icon>
+                        {{ letter.accountName }}
+
+                    </ion-card-header>
+
+                    <ion-card-content>
+
+                        <ion-item no-lines class="letterName">
+                            <ion-icon name="mail" class="cardIcon"></ion-icon>
+                                {{ letter.name }}           
+
+                                <p></p>
+                            <ion-icon name="flag" class="cardIcon"></ion-icon>
+                                {{ letter.status }}
+
+                                <p></p>
+                            <ion-icon name="cash" class="cardIcon"></ion-icon>
+                                R${{ letter.parcelValue * letter.totalParcels }},00
+
+                            <ion-badge item-right item-bottom class=" {{ letter.emitted }}">
+                                {{ letter.emitted }}
+                            </ion-badge>
+                        </ion-item>                 
+
+                    </ion-card-content>
+                </ion-card>
+
+</ion-content>
+

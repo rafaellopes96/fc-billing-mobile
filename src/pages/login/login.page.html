@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-img class="center" src="http://fc-billing.azurewebsites.net/Content/images/billing-logo.png"></ion-img>
+    
+    <div class="inputs">
+      <ion-item>
+            <ion-label class="centerInput" color="dark" stacked>Usuário</ion-label>
+            <ion-input type="email" placeholder="" [(ngModel)]="username">
+            </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="dark" stacked>Senha</ion-label>
+            <ion-input type="password" placeholder="" [(ngModel)]="password"></ion-input>
+        </ion-item>
+    </div>
+        
+
+    <button ion-button color="dark" class="centerButton" (click)="authUserClient(username, password)">
+        Entrar
+    </button>
+</ion-content>

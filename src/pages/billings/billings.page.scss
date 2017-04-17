@@ -1,0 +1,67 @@
+.topMiddle{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.searchBar{
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-start: 10px;
+   // display: block;
+ //   padding: 15px 50px;
+}
+
+.itemRight{
+    margin-left: auto;
+    margin-right: 0px;
+    margin-block-start: auto;
+    //display: block;
+}
+
+.false {
+    color: white !important;
+    background-color: darkred;
+    font-size: 11px;
+    padding: 3px 4px;   
+}
+
+.true {
+    color: white !important;
+    background-color: green;
+    font-size: 11px;
+    padding: 3px 9px;
+}
+
+.letters{
+    font-size: 13px;
+    
+}
+
+.headerList {
+    margin-left: 5px;
+    margin-block-start: 2px;
+}
+
+.cardsHeader {
+    padding: 6px 10px;
+    
+}
+
+.list {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.cardIcon {
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.letterName {
+    margin-left: -16px;
+    font-size: 14px;
+    margin-block-start: -15px;
+}
